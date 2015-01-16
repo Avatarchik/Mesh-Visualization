@@ -53,7 +53,10 @@ docs/_build/
 # PyBuilder
 target/
 
-#Intellij
+# Intellij
 .idea/
 *.iml
 *.iws
+
+# Directories
+tests/
