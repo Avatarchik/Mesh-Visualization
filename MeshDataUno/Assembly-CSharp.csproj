@@ -47,28 +47,21 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\New_Scripts\CreateCylinder.cs" />
-     <Compile Include="Assets\New_Scripts\SimpleJSON\JSON Tests\CSharp\Test_CSharp.cs" />
-     <Compile Include="Assets\New_Scripts\SimpleJSON\plugins\SimpleJSON.cs" />
-     <Compile Include="Assets\Scripts\General Scripts\ActivateTrigger.cs" />
-     <None Include="Assets\Plugins\Android\AndroidManifest.xml" />
      <None Include="Assets\README.txt" />
      <None Include="Assets\New_Scripts\testfile.txt" />
      <None Include="Assets\Standard Assets\Skyboxes\_skybox info.txt" />
-     <None Include="Assets\New_Scripts\SimpleJSON\JSON Tests\TroubleShoot.txt" />
-     <None Include="Assets\Plugins\Sphero\License.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.0/UnityEngine.UI.dll</HintPath>
  </Reference>
- <Reference Include="JsonFx.Json">
- <HintPath>C:/Users/johnmccormack2307/Mesh_Network/MeshDataUno/Assets/Plugins/Sphero/JsonFx.Json.dll</HintPath>
+ <Reference Include="Npgsql">
+ <HintPath>C:/Users/johnmccormack2307/Mesh/MeshDataUno/Assets/New_Scripts/Npgsql.dll</HintPath>
  </Reference>
- <Reference Include="ICSharpCode.SharpZipLib">
- <HintPath>C:/Users/johnmccormack2307/Mesh_Network/MeshDataUno/Assets/New_Scripts/SimpleJSON/plugins/ICSharpCode.SharpZipLib.dll</HintPath>
+ <Reference Include="Npgsql.EntityFramework">
+ <HintPath>C:/Users/johnmccormack2307/Mesh/MeshDataUno/Assets/New_Scripts/Npgsql.EntityFramework.dll</HintPath>
  </Reference>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{B37E8080-115E-87B7-CDA2-315179D2F93C}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
+ <Reference Include="Npgsql.EntityFrameworkLegacy">
+ <HintPath>C:/Users/johnmccormack2307/Mesh/MeshDataUno/Assets/New_Scripts/Npgsql.EntityFrameworkLegacy.dll</HintPath>
+ </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

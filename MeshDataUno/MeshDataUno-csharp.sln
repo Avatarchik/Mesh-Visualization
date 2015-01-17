@@ -1,8 +1,6 @@
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2008
 
-Project("{C64AC207-67C0-C513-EE0A-387B2FBA0A3A}") = "MeshDataUno", "Assembly-CSharp-firstpass-vs.csproj", "{B37E8080-115E-87B7-CDA2-315179D2F93C}"
-EndProject
 Project("{C64AC207-67C0-C513-EE0A-387B2FBA0A3A}") = "MeshDataUno", "Assembly-CSharp-vs.csproj", "{1BE243E5-F863-1846-813C-43B027D1D631}"
 EndProject
 Global
@@ -11,10 +9,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{B37E8080-115E-87B7-CDA2-315179D2F93C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B37E8080-115E-87B7-CDA2-315179D2F93C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B37E8080-115E-87B7-CDA2-315179D2F93C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B37E8080-115E-87B7-CDA2-315179D2F93C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{1BE243E5-F863-1846-813C-43B027D1D631}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{1BE243E5-F863-1846-813C-43B027D1D631}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1BE243E5-F863-1846-813C-43B027D1D631}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -23,7 +17,7 @@ Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-			GlobalSection(MonoDevelopProperties) = preSolution
+								GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = Assembly-CSharp.csproj
 		Policies = $0
 		$0.TextStylePolicy = $1

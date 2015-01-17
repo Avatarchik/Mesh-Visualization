@@ -97,11 +97,20 @@
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.0/UnityEngine.UI.dll</HintPath>
  </Reference>
- <Reference Include="JsonFx.Json">
- <HintPath>C:/Users/johnmccormack2307/Mesh_Network/MeshDataUno/Assets/Plugins/Sphero/JsonFx.Json.dll</HintPath>
+ <Reference Include="Npgsql">
+ <HintPath>C:/Users/johnmccormack2307/Mesh/MeshDataUno/Assets/New_Scripts/Npgsql.dll</HintPath>
+ </Reference>
+ <Reference Include="Npgsql.EntityFramework">
+ <HintPath>C:/Users/johnmccormack2307/Mesh/MeshDataUno/Assets/New_Scripts/Npgsql.EntityFramework.dll</HintPath>
+ </Reference>
+ <Reference Include="Npgsql.EntityFrameworkLegacy">
+ <HintPath>C:/Users/johnmccormack2307/Mesh/MeshDataUno/Assets/New_Scripts/Npgsql.EntityFrameworkLegacy.dll</HintPath>
  </Reference>
  <Reference Include="ICSharpCode.SharpZipLib">
- <HintPath>C:/Users/johnmccormack2307/Mesh_Network/MeshDataUno/Assets/New_Scripts/SimpleJSON/plugins/ICSharpCode.SharpZipLib.dll</HintPath>
+ <HintPath>C:/Users/johnmccormack2307/Mesh/MeshDataUno/Assets/New_Scripts/SimpleJSON/plugins/ICSharpCode.SharpZipLib.dll</HintPath>
+ </Reference>
+ <Reference Include="JsonFx.Json">
+ <HintPath>C:/Users/johnmccormack2307/Mesh/MeshDataUno/Assets/Plugins/Sphero/JsonFx.Json.dll</HintPath>
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
