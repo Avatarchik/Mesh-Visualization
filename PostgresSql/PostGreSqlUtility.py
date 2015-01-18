@@ -48,7 +48,8 @@ class Location:
 
 if __name__ == "__main__":
 
-    psgu_utility = Utility("postgres","postgres","localhost","password")
+    # db name, user, host, password
+    psgu_utility = Utility("postgres", "postgres", "localhost", "password")
 
     tst_location = Location(20.0, 26.0, 38.0)
 
