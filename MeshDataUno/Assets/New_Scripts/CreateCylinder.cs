@@ -12,7 +12,6 @@ public class CreateCylinder : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		string test;
 		Rigidbody nodeInstance;
 		PostGresUtility db = new PostGresUtility ();
 		List<NodeClass> NodeList = db.getLocations ();

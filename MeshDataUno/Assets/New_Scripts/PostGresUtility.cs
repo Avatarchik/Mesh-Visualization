@@ -8,7 +8,7 @@ using Npgsql;
 public class PostGresUtility {
 	public NpgsqlConnection conn;
 
-	public PostGresUtility(string server = "localhost", string port = "5432", string user_id = "postgres", string password = "password", string database = "postgres"){
+	public PostGresUtility(string server = "10.221.11.30", string port = "5432", string user_id = "postgres", string password = "password", string database = "postgres"){
 		string connectionString = "Server=" + server + ";Port=" + port + ";User Id=" + user_id + ";Password=" + password + ";Database=" + database;
 		//conn = new NpgsqlConnection ("Server=localhost;Port=5432;User Id=postgres;Password=password;Database=postgres");
 		conn = new NpgsqlConnection (connectionString);
