@@ -21,9 +21,6 @@ public class CreateCylinder : MonoBehaviour {
 			nodeInstance.name = nodeInstance.GetInstanceID().ToString();
 			node.setPrefabID(nodeInstance.name);
 		}
-
-
-
 	}
 			
 
