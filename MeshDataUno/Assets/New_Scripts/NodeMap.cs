@@ -31,7 +31,7 @@ public class NodeMap {
 	public List<int> getAllPrefabIds(){
 		List<int> output = new List<int>();
 		foreach(KeyValuePair<int,NodeClass> item in nodemap){
-			output.Add (item.Value.prefabID());
+			output.Add (item.Value.getPrefabID());
 		}
 		return output;
 	}
