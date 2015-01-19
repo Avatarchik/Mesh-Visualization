@@ -20,11 +20,8 @@ public class CreateCylinder : MonoBehaviour {
 		foreach (NodeClass node in NodeList) {
 			nodeInstance = (Rigidbody)Instantiate (Node, node.getLocation (), Quaternion.Euler (0, 0, 0));
 			nodeInstance.name = nodeInstance.GetInstanceID().ToString();
-			node.setPrefabID = nodeInstance.name;
+			node.setPrefabID(nodeInstance.name);
 		}
-
-
-
 	}
 			
 

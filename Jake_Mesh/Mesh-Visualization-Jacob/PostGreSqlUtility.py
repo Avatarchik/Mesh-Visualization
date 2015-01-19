@@ -52,7 +52,7 @@ if __name__ == "__main__":
 
     tst_location = Location(20, 10.0, 30.0)
 
-    tst_packet = Packet(4, tst_location,1, True)
+    tst_packet = Packet(4, tst_location, 1, True)
     tst_packets = []
     tst_packets.append(tst_packet)
 

@@ -23,7 +23,7 @@ public class NodeMap {
 	public List<int> getAllNodeIds(){
 		List<int> output = new List<int>();
 		foreach (KeyValuePair<int,NodeClass> item in nodemap) {
-			output.Add(item.Key)
+			output.Add(item.Key);
 		}
 		return output;
 	}
