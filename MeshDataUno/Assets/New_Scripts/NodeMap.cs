@@ -16,6 +16,14 @@ public class NodeMap {
 		nodemap.Add (key, node);
 	}
 
+	public void upsert(int key, NodeClass node){
+		if (nodemap.ContainsKey (key)) {
+			nodemap[key] = node;
+		} else {
+			nodemap.Add (key, node);
+		}
+	}
+
 	public void remove(int key){
 		nodemap.Remove (key);
 	}
