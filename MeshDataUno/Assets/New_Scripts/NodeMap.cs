@@ -23,21 +23,21 @@ public class NodeMap {
 	public List<int> getAllNodeIds(){
 		List<int> output = new List<int>();
 		foreach (KeyValuePair<int,NodeClass> item in nodemap) {
-			output.Add(item.Key)
+			output.Add(item.Key);
 		}
 		return output;
 	}
 
-	public List<int> getAllPrefabIds(){
-		List<int> output = new List<int>();
+	public List<string> getAllPrefabIds(){
+		List<string> output = new List<string>();
 		foreach(KeyValuePair<int,NodeClass> item in nodemap){
-			output.Add (item.Value.prefabID());
+			output.Add (item.Value.getPrefabID());
 		}
 		return output;
 	}
 
-	public Dictionary<int,int> getNodePrefabPair(){
-		Dictionary<int,int> output = new Dictionary<int,int> ();
+	public Dictionary<int,string> getNodePrefabPair(){
+		Dictionary<int,string> output = new Dictionary<int,string> ();
 		foreach (KeyValuePair<int,NodeClass> item in nodemap) {
 			output.Add(item.Key,item.Value.getPrefabID());
 		}

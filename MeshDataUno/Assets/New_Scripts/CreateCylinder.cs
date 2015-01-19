@@ -12,7 +12,6 @@ public class CreateCylinder : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		string test;
 		Rigidbody nodeInstance;
 		PostGresUtility db = new PostGresUtility ();
 		List<NodeClass> NodeList = db.getLocations ();
@@ -20,7 +19,7 @@ public class CreateCylinder : MonoBehaviour {
 		foreach (NodeClass node in NodeList) {
 			nodeInstance = (Rigidbody)Instantiate (Node, node.getLocation (), Quaternion.Euler (0, 0, 0));
 			nodeInstance.name = nodeInstance.GetInstanceID().ToString();
-			node.setPrefabID = nodeInstance.name;
+			node.setPrefabID(nodeInstance.name);
 		}
 
 

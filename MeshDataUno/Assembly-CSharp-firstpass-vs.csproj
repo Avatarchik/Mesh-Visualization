@@ -92,7 +92,6 @@
      <None Include="Assets\README.txt" />
      <None Include="Assets\New_Scripts\testfile.txt" />
      <None Include="Assets\Standard Assets\Skyboxes\_skybox info.txt" />
-     <None Include="Assets\New_Scripts\SimpleJSON\JSON Tests\TroubleShoot.txt" />
      <None Include="Assets\Plugins\Sphero\License.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.0/UnityEngine.UI.dll</HintPath>
@@ -106,8 +105,11 @@
  <Reference Include="Npgsql.EntityFrameworkLegacy">
  <HintPath>C:/Users/johnmccormack2307/Mesh/MeshDataUno/Assets/New_Scripts/Npgsql.EntityFrameworkLegacy.dll</HintPath>
  </Reference>
- <Reference Include="ICSharpCode.SharpZipLib">
- <HintPath>C:/Users/johnmccormack2307/Mesh/MeshDataUno/Assets/New_Scripts/SimpleJSON/plugins/ICSharpCode.SharpZipLib.dll</HintPath>
+ <Reference Include="System.Data">
+ <HintPath>C:/Users/johnmccormack2307/Mesh/MeshDataUno/Assets/Plugins/System.Data.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Security">
+ <HintPath>C:/Users/johnmccormack2307/Mesh/MeshDataUno/Assets/Plugins/System.Security.dll</HintPath>
  </Reference>
  <Reference Include="JsonFx.Json">
  <HintPath>C:/Users/johnmccormack2307/Mesh/MeshDataUno/Assets/Plugins/Sphero/JsonFx.Json.dll</HintPath>
