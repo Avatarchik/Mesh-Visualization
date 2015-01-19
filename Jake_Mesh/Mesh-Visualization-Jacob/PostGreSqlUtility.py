@@ -48,11 +48,11 @@ class Location:
 
 if __name__ == "__main__":
 
-    psgu_utility = Utility("postgres","postgres","10.221.11.23","password")
+    psgu_utility = Utility("postgres","postgres","localhost","password")
 
-    tst_location = Location(69.0, 69.0, 69.0)
+    tst_location = Location(20, 10.0, 30.0)
 
-    tst_packet = Packet(14, tst_location,1, False)
+    tst_packet = Packet(4, tst_location,1, True)
     tst_packets = []
     tst_packets.append(tst_packet)
 

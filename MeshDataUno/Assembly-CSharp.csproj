@@ -47,7 +47,10 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\New_Scripts\CreateCylinder.cs" />
+     <Compile Include="Assets\New_Scripts\NodeClass.cs" />
+     <Compile Include="Assets\New_Scripts\NodeMap.cs" />
      <Compile Include="Assets\New_Scripts\PostGresUtility.cs" />
+     <Compile Include="Assets\nodeClass.cs" />
      <None Include="Assets\README.txt" />
      <None Include="Assets\New_Scripts\testfile.txt" />
      <None Include="Assets\Standard Assets\Skyboxes\_skybox info.txt" />
@@ -57,11 +60,11 @@
  <Reference Include="Npgsql">
  <HintPath>C:/Users/johnmccormack2307/Mesh/MeshDataUno/Assets/New_Scripts/Npgsql.dll</HintPath>
  </Reference>
- <Reference Include="System.Data">
- <HintPath>C:/Users/johnmccormack2307/Mesh/MeshDataUno/Assets/Plugins/System.Data.dll</HintPath>
+ <Reference Include="Npgsql.EntityFramework">
+ <HintPath>C:/Users/johnmccormack2307/Mesh/MeshDataUno/Assets/New_Scripts/Npgsql.EntityFramework.dll</HintPath>
  </Reference>
- <Reference Include="System.Security">
- <HintPath>C:/Users/johnmccormack2307/Mesh/MeshDataUno/Assets/Plugins/System.Security.dll</HintPath>
+ <Reference Include="Npgsql.EntityFrameworkLegacy">
+ <HintPath>C:/Users/johnmccormack2307/Mesh/MeshDataUno/Assets/New_Scripts/Npgsql.EntityFrameworkLegacy.dll</HintPath>
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
