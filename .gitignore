@@ -54,7 +54,7 @@ docs/_build/
 target/
 
 # Unity
-MeshDataUno/[Ll]ibrary/
+MeshDataUno/Library/metadata
 MeshDataUno/[Tt]emp/
 MeshDataUno/[Oo]bj/
 MeshDataUno/[Bb]uild/
