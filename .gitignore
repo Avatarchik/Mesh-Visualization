@@ -59,6 +59,9 @@ target/
 # Unity
 MeshDataUno/Library/ScriptAssemblies
 MeshDataUno/Library/metadata
+MeshDataUno/Library/CurrentLayout.dwlt
+MeshDataUno/Library/assetDatabase3
+MeshDataUno/Library/guidmapper
 MeshDataUno/[Tt]emp/
 MeshDataUno/[Oo]bj/
 MeshDataUno/[Bb]uild/
