@@ -82,3 +82,12 @@ MeshDataUno/MeshDataUno.userprefs
 *.booproj
 # Unity3D Generated File On Crash Reports
 sysinfo.txt
+
+# Intellij
+.idea/
+*.iml
+*.iws
+
+# Directories
+tests/
+
