@@ -3,6 +3,12 @@ using System.Collections;
 
 public class NodeHider : MonoBehaviour {
 
+	private NodeClassMono nodeClassMono;
+
+	void Awake(){
+		nodeClassMono = gameObject.GetComponent<NodeClassMono> ();
+	}
+
 	// Use this for initialization
 	void Start () {
 		Debug.Log ("Its here!");
@@ -14,10 +20,10 @@ public class NodeHider : MonoBehaviour {
 	}
 
 	void OnBecameVisible(){
-		Debug.Log ("In View");
+		nodeClassMono.setNodeStatus (true);
 	}
 
 	void OnBecameInvisible(){
-		Debug.Log ("ANNNNND Its gone");
+		nodeClassMono.setNodeStatus (false);
 	}
 }
