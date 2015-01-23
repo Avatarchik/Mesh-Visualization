@@ -1,4 +1,3 @@
-
 import psycopg2 as psy
 
 
@@ -16,34 +15,35 @@ class Utility:
             print e
 
     # Upsert
-    def Ups_into_table(self, packets):
+    def ups_into_table(self, packet):
 
         try:
-            for packet in packets:
-                self.cur.execute(
-                    "SELECT update_db(%s,%s,%s,(%s,%s,%s));",
-                    (packet.n_id, packet.node_type,packet.node_status,packet.location.x_loc,packet.location.y_loc,packet.location.z_loc)
-                )
-                self.conn.commit()
+            self.cur.execute(
+                "SELECT update_db(%s,%s,(%s,%s,%s));",
+                (packet.n_id, packet.node_status,
+                 packet.location.x_loc, packet.location.y_loc, packet.location.z_loc)
+            )
+            trans_id = self.cur.fetchone()[0]
+            self.conn.commit()
+            return trans_id
         except Exception, e:
             print e
 
 
 class Packet:
     # Converts a packet from a PI to an object to be stored into table
-    def __init__(self, n_id, location, node_type, node_status):
+    def __init__(self, n_id, location, node_status):
         self.n_id = n_id
         self.location = location
-        self.node_type = node_type
         self.node_status = node_status
 
 
 class Location:
 
-    def __init__(self, x_loc, y_loc, z_loc):
-        self.x_loc = x_loc
-        self.y_loc = y_loc
-        self.z_loc = z_loc
+    def __init__(self, x, y, z):
+        self.x_loc = x
+        self.y_loc = y
+        self.z_loc = z
 
 
 if __name__ == "__main__":
@@ -53,8 +53,6 @@ if __name__ == "__main__":
 
     tst_location = Location(20.0, 26.0, 38.0)
 
-    tst_packet = Packet(12, tst_location,1, False)
-    tst_packets = []
-    tst_packets.append(tst_packet)
+    tst_packet = Packet(12, tst_location, False)
 
-    psgu_utility.Ups_into_table(tst_packets)
+    psgu_utility.ups_into_table(tst_packet)
