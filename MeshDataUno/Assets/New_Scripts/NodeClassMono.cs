@@ -2,7 +2,7 @@
 using System.Collections;
 
 [System.Serializable]
-public class NodeClass {
+public class NodeClassMono : MonoBehaviour {
 	public int node_id;
 	public string time_stamp;
 	public int node_type;
@@ -10,7 +10,7 @@ public class NodeClass {
 	public Vector3 location;
 	public string prefabID = "";
 
-	public NodeClass(int node_id, string time_stamp, int node_type, bool node_status, Vector3 location){
+	public NodeClassMono(int node_id, string time_stamp, int node_type, bool node_status, Vector3 location){
 		this.node_id = node_id;
 		this.time_stamp = time_stamp;
 		this.node_type = node_type;

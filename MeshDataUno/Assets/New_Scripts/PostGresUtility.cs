@@ -15,7 +15,7 @@ public class PostGresUtility {
 		conn.Open();
 	}
 
-	public List<NodeClass> getLocations(){
+	public List<NodeClass> getNodeList(){
 		NpgsqlCommand command = conn.CreateCommand ();
 		string sql = "SELECT * FROM test_table";
 		command.CommandText = sql;
