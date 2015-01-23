@@ -1,0 +1,16 @@
+
+Sensor Tables:
+	Light:
+		transaction_id, foreign key, bigint
+		value, float
+	RFID:
+		transaction_id, foreign key, bigint
+		value, text
+	Temperature:
+		transaction_id, foreign key, bigint
+		value, float
+
+Status/Location:
+	transaction_id, foreign key, bigint
+	location, location
+	status, boolean
