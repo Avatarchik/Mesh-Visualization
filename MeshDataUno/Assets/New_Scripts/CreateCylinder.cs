@@ -8,15 +8,21 @@ using Npgsql;
 public class CreateCylinder : MonoBehaviour {
 
 	public Rigidbody Node;
-	private NodeClassMono nodeClassMono;
 	//NpgsqlConnection conn;
+<<<<<<< Updated upstream
 
 	void Awake(){
 
 	}
+=======
+	
+>>>>>>> Stashed changes
 	// Use this for initialization
 	void Start () {
+		PostGresUtility postGresUtility = new PostGresUtility ();
+		postGresUtility.createNodeMap ();
 
+		/*
 		Rigidbody nodeInstance;
 		nodeInstance = (Rigidbody)Instantiate(Node, new Vector3(0,0,0), Quaternion.Euler (0,0,0));
 		nodeClassMono = nodeInstance.GetComponent<NodeClassMono> ();
@@ -26,7 +32,7 @@ public class CreateCylinder : MonoBehaviour {
 		nodeClassMono.setNodeType (42);
 		nodeClassMono.setPrefabID(nodeInstance.GetInstanceID().ToString ());
 		nodeClassMono.setTimeStamp("nine y nine o clock");
-		/*
+
 		Rigidbody nodeInstance;
 		PostGresUtility db = new PostGresUtility ();
 		List<NodeClass> NodeList = db.getNodeList ();

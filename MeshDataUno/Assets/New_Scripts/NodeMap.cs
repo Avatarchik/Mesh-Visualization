@@ -6,17 +6,17 @@ using Npgsql;
 
 
 public class NodeMap {
-	public Dictionary<int,NodeClass> nodemap;
+	public Dictionary<int,NodeClassMono> nodemap;
 
 	public NodeMap(){
-		nodemap = new Dictionary<int, NodeClass> ();
+		nodemap = new Dictionary<int, NodeClassMono> ();
 	}
 
-	public void append(int key, NodeClass node){
+	public void append(int key, NodeClassMono node){
 		nodemap.Add (key, node);
 	}
 
-	public void upsert(int key, NodeClass node){
+	public void upsert(int key, NodeClassMono node){
 		if (nodemap.ContainsKey (key)) {
 			nodemap[key] = node;
 		} else {
@@ -30,7 +30,7 @@ public class NodeMap {
 
 	public List<int> getAllNodeIds(){
 		List<int> output = new List<int>();
-		foreach (KeyValuePair<int,NodeClass> item in nodemap) {
+		foreach (KeyValuePair<int,NodeClassMono> item in nodemap) {
 			output.Add(item.Key);
 		}
 		return output;
@@ -38,16 +38,16 @@ public class NodeMap {
 
 	public List<string> getAllPrefabIds(){
 		List<string> output = new List<string>();
-		foreach(KeyValuePair<int,NodeClass> item in nodemap){
-			output.Add (item.Value.getPrefabID());
+		foreach(KeyValuePair<int,NodeClassMono> item in nodemap){
+			output.Add (item.Value.getPrefabId());
 		}
 		return output;
 	}
 
 	public Dictionary<int,string> getNodePrefabPair(){
 		Dictionary<int,string> output = new Dictionary<int,string> ();
-		foreach (KeyValuePair<int,NodeClass> item in nodemap) {
-			output.Add(item.Key,item.Value.getPrefabID());
+		foreach (KeyValuePair<int,NodeClassMono> item in nodemap) {
+			output.Add(item.Key,item.Value.getPrefabId());
 		}
 		return output;
 	}
