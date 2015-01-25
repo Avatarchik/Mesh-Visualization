@@ -4,10 +4,11 @@ import postgresql_utility.PostGreSqlUtility as pgs_utility
 import ConstantStrings as cs
 
 
-def create_meta(node_id, node_status, location):
+def create_meta(node_id, node_status, location, ip_addr):
     _meta = {
         cs.KEY_NODE_ID: node_id,
         cs.KEY_NODE_STATUS: node_status,
+        cs.KEY_NODE_IP: ip_addr,
         cs.KEY_LOCATION:
             {
                 cs.KEY_X_LOC: location.x_loc,

@@ -1,10 +1,8 @@
 CREATE TABLE light_sensor_table
 (
-  transaction_id integer NOT NULL,
-  light_value double precision,
-  CONSTRAINT t_id FOREIGN KEY (transaction_id)
-      REFERENCES current_nodes_table (transaction_id) MATCH SIMPLE
-      ON UPDATE NO ACTION ON DELETE NO ACTION
+  transaction_id bigint NOT NULL,
+  value double precision,
+  CONSTRAINT "transaction id" PRIMARY KEY (transaction_id)
 )
 WITH (
   OIDS=FALSE

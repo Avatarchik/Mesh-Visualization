@@ -8,8 +8,8 @@ base_url = 'http://localhost:5000'
 
 if __name__ == "__main__":
 
-    location = pgs_utility.Location(12.0, 25.2, 30.1)
-    meta = cjo.create_meta(10, True, location)
+    location = pgs_utility.Location(32.0, 11.2, 4.1)
+    meta = cjo.create_meta(10, True, location, '10.221.11.97')
 
     # Temperature, RFID, Light
     temperature = cjo.create_temperature(65.9)

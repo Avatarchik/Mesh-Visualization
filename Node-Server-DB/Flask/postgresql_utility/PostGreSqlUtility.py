@@ -16,7 +16,6 @@ class Utility:
 
     # Upsert
     def ups_into_table(self, packet):
-
         try:
             self.cur.execute(
                 "SELECT update_db(%s,%s,(%s,%s,%s));",
@@ -28,6 +27,47 @@ class Utility:
             return trans_id
         except Exception, e:
             print e
+            raise e
+
+    def ins_into_temp_table(self, packet):
+        try:
+            self.cur.execute(
+                "INSERT INTO temperature_sensor_table (transaction_id, value) VALUES (%s, %s);",
+                (packet.transaction_id, packet.value)
+            )
+            self.conn.commit()
+        except Exception, e:
+            raise e
+
+    def ins_into_rfid_table(self, packet):
+        try:
+            self.cur.execute(
+                "INSERT INTO rfid_sensor_table (transaction_id, value) VALUES (%s, %s);",
+                (packet.transaction_id, packet.value)
+            )
+            self.conn.commit()
+        except Exception, e:
+            raise e
+
+    def ins_into_light_table(self, packet):
+        try:
+            self.cur.execute(
+                "INSERT INTO light_sensor_table (transaction_id, value) VALUES (%s, %s);",
+                (packet.transaction_id, packet.value)
+            )
+            self.conn.commit()
+        except Exception, e:
+                raise e
+
+    def ins_into_node_history_table(self, packet):
+        try:
+            self.cur.execute(
+                "INSERT INTO node_history_table (transaction_id, node_id, status, location, ip_address) VALUES (%s, %s, %s, (%s, %s, %s), %s)",
+                (packet.transaction_id, packet.node_id, packet.node_status, packet.location.x_loc, packet.location.y_loc, packet.location.z_loc, packet.node_ip)
+            )
+            self.conn.commit()
+        except Exception, e:
+            raise e
 
 
 class Packet:
@@ -36,6 +76,21 @@ class Packet:
         self.n_id = n_id
         self.location = location
         self.node_status = node_status
+
+
+class SensorPacket:
+    def __init__(self, transaction_id, value):
+        self.transaction_id = transaction_id
+        self.value = value
+
+
+class HistoryPacket:
+    def __init__(self, transaction_id, node_id, status, ip_addr, location):
+        self.transaction_id = transaction_id
+        self.node_id = node_id
+        self.node_status = status
+        self.node_ip = ip_addr
+        self.location = location
 
 
 class Location:

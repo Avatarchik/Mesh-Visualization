@@ -2,8 +2,9 @@
 // Request Json
 {
 	"meta" : {
-		"node_id" : 13,
-		"node_status" : true,
+		"node_id": 13,
+		"node_status": true,
+		"ip_address": "10.221.11.56"
 		"location" : {
 		    'x': 13.0,
 		    'y': 28.3,
@@ -15,7 +16,7 @@
 			"value" : 65.4
 		}
 		"RFID" : {
-			"id" : 52618472
+			"value" : 52618472
 		}			
 		"light" : {
 			"value" : 180.5

@@ -1,13 +1,11 @@
-CREATE TABLE light_table
+CREATE TABLE rfid_sensor_table
 (
-  transaction_id bigint,
-  value double precision,
-  CONSTRAINT "transaction id" FOREIGN KEY (transaction_id)
-      REFERENCES current_table (transaction_id) MATCH SIMPLE
-      ON UPDATE NO ACTION ON DELETE NO ACTION
+  transaction_id bigint NOT NULL,
+  value text,
+  CONSTRAINT "trans id" PRIMARY KEY (transaction_id)
 )
 WITH (
   OIDS=FALSE
 );
-ALTER TABLE light_table
+ALTER TABLE rfid_sensor_table
   OWNER TO postgres;

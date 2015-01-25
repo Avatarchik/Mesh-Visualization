@@ -1,16 +1,17 @@
 
 Sensor Tables:
 	Light:
-		transaction_id, foreign key, bigint
+		transaction_id, primary key, bigint
 		value, float
 	RFID:
-		transaction_id, foreign key, bigint
+		transaction_id, primary key, bigint
 		value, text
 	Temperature:
-		transaction_id, foreign key, bigint
+		transaction_id, primary key, bigint
 		value, float
 
-Status/Location:
-	transaction_id, foreign key, bigint
+Node history:
+	transaction_id, primary key, bigint
 	location, location
 	status, boolean
+	ip_address, char[]

@@ -1,13 +1,11 @@
-CREATE TABLE temperature_table
+CREATE TABLE temperature_sensor_table
 (
-  transaction_id integer,
+  transaction_id bigint NOT NULL,
   value double precision,
-  CONSTRAINT "transaction id" FOREIGN KEY (transaction_id)
-      REFERENCES current_table (transaction_id) MATCH SIMPLE
-      ON UPDATE NO ACTION ON DELETE NO ACTION
+  CONSTRAINT transaction PRIMARY KEY (transaction_id)
 )
 WITH (
   OIDS=FALSE
 );
-ALTER TABLE temperature_table
+ALTER TABLE temperature_sensor_table
   OWNER TO postgres;
