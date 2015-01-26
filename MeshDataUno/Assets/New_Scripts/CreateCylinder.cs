@@ -9,14 +9,13 @@ public class CreateCylinder : MonoBehaviour {
 
 	public Rigidbody Node;
 	//NpgsqlConnection conn;
-<<<<<<< Updated upstream
 
 	void Awake(){
 
 	}
-=======
+
 	
->>>>>>> Stashed changes
+
 	// Use this for initialization
 	void Start () {
 		PostGresUtility postGresUtility = new PostGresUtility ();
