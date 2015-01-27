@@ -11,16 +11,6 @@ public class PostGresUtility : MonoBehaviour {
 	public Rigidbody Node;
 	private NodeClassMono nodeClassMono;
 
-	/*
-	public PostGresUtility(string server = "10.221.11.23", string port = "5432", string user_id = "postgres", string password = "password", string database = "postgres"){
-		string connectionString = "Server=" + server + ";Port=" + port + ";User Id=" + user_id + ";Password=" + password + ";Database=" + database;
-		//conn = new NpgsqlConnection ("Server=localhost;Port=5432;User Id=postgres;Password=password;Database=postgres");
-		conn = new NpgsqlConnection (connectionString);
-		conn.Open();
-		this.createNodeMap ();
-	}
-	*/
-
 	public void Start(){
 		string server = "10.221.11.23";
 		string port = "5432";
@@ -54,7 +44,7 @@ public class PostGresUtility : MonoBehaviour {
 			string time_stamp = reader.GetDateTime (4).ToString();
 			//Debug.Log(reader["time_stamp"]);
 
-			Rigidbody nodeInstance = (Rigidbody)GameObject.Instantiate(Node, new Vector3(0,0,0), Quaternion.Euler (0,0,0));
+			Rigidbody nodeInstance = (Rigidbody)GameObject.Instantiate(Node,locationVector3, Quaternion.Euler (0,0,0));
 			nodeClassMono = nodeInstance.GetComponent<NodeClassMono>();
 			nodeClassMono.setLocation (locationVector3);
 			nodeClassMono.setNodeId (node_id);
@@ -92,8 +82,6 @@ public class PostGresUtility : MonoBehaviour {
 
 
 		return outputVector;
-
-		                             
-
+		                           
 	}
 }

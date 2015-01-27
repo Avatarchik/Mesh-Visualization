@@ -4,6 +4,9 @@ using System.Collections;
 public class NodeHider : MonoBehaviour {
 
 	private NodeClassMono nodeClassMono;
+	public bool isVisible = true;
+	public int time = 0;
+	public int fps = 30;
 
 	void Awake(){
 		nodeClassMono = gameObject.GetComponent<NodeClassMono> ();
@@ -16,14 +19,21 @@ public class NodeHider : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
+		if (isVisible == true) {
+			time += 1;
+			if (time == fps * 5){
+				time = 0;
+				NodePostgreSQL nodeDB = new NodePostgreSQL ();
+				nodeClassMono = nodeDB.UpdateNode (nodeClassMono);
+			}
+		}
 	}
 
 	void OnBecameVisible(){
-		nodeClassMono.setNodeStatus (true);
+		isVisible = true;
 	}
 
 	void OnBecameInvisible(){
-		nodeClassMono.setNodeStatus (false);
+		isVisible = false;
 	}
 }
