@@ -34,7 +34,7 @@ class CharacterMotorMovement {
 
 	// The gravity for the character
 	var gravity : float = 10.0;
-	var maxFallSpeed : float = 20.0;
+	var maxFallSpeed : float = 50.0;
 	
 	// For the next variables, @System.NonSerialized tells Unity to not serialize the variable or show it in the inspector view.
 	// Very handy for organization!
@@ -70,13 +70,13 @@ enum MovementTransferOnJump {
 // We will contain all the jumping related variables in one helper class for clarity.
 class CharacterMotorJumping {
 	// Can the character jump?
-	var enabled : boolean = true;
+	var enabled : boolean = false;
 
 	// How high do we jump when pressing jump and letting go immediately
-	var baseHeight : float = 1.0;
+	var baseHeight : float = 0.0;
 	
 	// We add extraHeight units (meters) on top when holding the button down longer while jumping
-	var extraHeight : float = 4.1;
+	var extraHeight : float = 0.0;
 	
 	// How much does the character jump out perpendicular to the surface on walkable surfaces?
 	// 0 means a fully vertical jump and 1 means fully perpendicular.
@@ -84,7 +84,7 @@ class CharacterMotorJumping {
 	
 	// How much does the character jump out perpendicular to the surface on too steep surfaces?
 	// 0 means a fully vertical jump and 1 means fully perpendicular.
-	var steepPerpAmount : float = 0.5;
+	var steepPerpAmount : float = 0.0;
 	
 	// For the next variables, @System.NonSerialized tells Unity to not serialize the variable or show it in the inspector view.
 	// Very handy for organization!

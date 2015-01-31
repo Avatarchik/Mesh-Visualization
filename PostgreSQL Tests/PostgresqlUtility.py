@@ -106,8 +106,8 @@ if __name__ == "__main__":
     # db name, user, host, password
     psgu_utility = Utility("postgres", "postgres", "10.221.11.23", "password")
 
-    tst_location = Location(10.0, 10.0, 10.0)
-
-    tst_packet = Packet(11, tst_location, False)
+    tst_location = Location(-25.0, 10.0, 10.0)
+    
+    tst_packet = Packet(13, tst_location, False)
 
     psgu_utility.ups_into_table(tst_packet)

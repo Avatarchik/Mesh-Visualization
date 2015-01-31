@@ -22,6 +22,12 @@ public class PostGresUtility : MonoBehaviour {
 		conn = new NpgsqlConnection (connectionString);
 		conn.Open();
 		this.createNodeMap ();
+
+		//Remove This Later, for testing Only
+		//string url = "http://10.221.11.23:5000/toggle_led";
+		//WWW www = new WWW (url);
+		//Debug.Log (www);
+		
 	}
 
 	public NodeMap createNodeMap(){
@@ -37,7 +43,7 @@ public class PostGresUtility : MonoBehaviour {
 			bool node_status = (bool)reader["node_status"];
 			//Debug.Log(node_status);
 			string locationString = (string)reader["location"];
-			Debug.Log(locationString);
+			//Debug.Log(locationString);
 			Vector3 locationVector3 = parseLocation(locationString);
 			int transaction_id = (int)reader.GetInt64(3);
 			//Debug.Log(reader["transaction_id"]);

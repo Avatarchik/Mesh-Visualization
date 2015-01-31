@@ -30,7 +30,7 @@ public class NodePostgreSQL {
 		while (reader.Read ()) {
 			int transaction_id = (int)reader.GetInt64(3);
 			if (nodeClassMono.getTransactionId() != transaction_id){
-				Debug.Log(reader["transaction_id"]);
+				//Debug.Log(reader["transaction_id"]);
 				bool node_status = (bool)reader["node_status"];
 				//Debug.Log(node_status);
 				string locationString = (string)reader["location"];
@@ -63,9 +63,9 @@ public class NodePostgreSQL {
 		Match Digit3Out = Regex.Match (Digit3tempString, "[-]?[0-9]+[.]?[0-9]*");
 		string Digit3OutString = (string)Digit3Out.ToString ();
 		
-		float Digit1Float = float.Parse (Digit1OutString);
-		float Digit2Float = float.Parse (Digit2OutString);
-		float Digit3Float = float.Parse (Digit3OutString);
+		int Digit1Float = int.Parse (Digit1OutString);
+		int Digit2Float = int.Parse (Digit2OutString);
+		int Digit3Float = int.Parse (Digit3OutString);
 		
 		Vector3 outputVector = new Vector3 (Digit1Float, Digit2Float, Digit3Float);
 		
