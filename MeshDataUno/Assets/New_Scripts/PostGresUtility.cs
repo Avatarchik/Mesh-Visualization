@@ -23,16 +23,11 @@ public class PostGresUtility : MonoBehaviour {
 		conn.Open();
 		this.createNodeMap ();
 
-		//Remove This Later, for testing Only
-		//string url = "http://10.221.11.23:5000/toggle_led";
-		//WWW www = new WWW (url);
-		//Debug.Log (www);
-		
 	}
 
 	public NodeMap createNodeMap(){
 		NpgsqlCommand command = conn.CreateCommand ();
-		string sql = "SELECT * FROM current_table";
+		string sql = "SELECT * FROM current_table INNER JOIN node_history_table ON (current_table.transaction_id = node_history_table.transaction_id)";
 		command.CommandText = sql;
 		NpgsqlDataReader reader = command.ExecuteReader ();
 		nodeMap = new NodeMap();
@@ -49,6 +44,8 @@ public class PostGresUtility : MonoBehaviour {
 			//Debug.Log(reader["transaction_id"]);
 			string time_stamp = reader.GetDateTime (4).ToString();
 			//Debug.Log(reader["time_stamp"]);
+			string ip_address = (string)reader["ip_address"];
+			//Debug.Log (ip_address);
 
 			Rigidbody nodeInstance = (Rigidbody)GameObject.Instantiate(Node,locationVector3, Quaternion.Euler (0,0,0));
 			nodeClassMono = nodeInstance.GetComponent<NodeClassMono>();
@@ -58,7 +55,9 @@ public class PostGresUtility : MonoBehaviour {
 			nodeClassMono.setTransactionId (transaction_id);
 			nodeClassMono.setPrefabId(nodeInstance.GetInstanceID().ToString ());
 			nodeClassMono.setTimeStamp(time_stamp);
+			nodeClassMono.setIpAddress(ip_address);
 			nodeMap.append(node_id, nodeClassMono);
+
 		}
 		return nodeMap;
 	}

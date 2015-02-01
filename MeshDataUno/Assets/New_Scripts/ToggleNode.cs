@@ -18,8 +18,10 @@ public class ToggleNode : MonoBehaviour {
 		if (Input.GetMouseButtonDown(0)){
 			if(Physics.Raycast (shootRay.origin, shootRay.direction, out shootHit, distance)){
 				NodeClassMono nodeClassMono = shootHit.collider.GetComponent<NodeClassMono>();
-				//NodePostgreSQL db = shootHit.collider.GetComponent<NodePostgreSQL>();
-				Debug.Log (nodeClassMono.getNodeId());
+
+				string url = "http://" + nodeClassMono.getIpAddress() + ":5000/toggle_led";
+				WWW www = new WWW (url);
+				Debug.Log (www);
 			}
 		}
 	}

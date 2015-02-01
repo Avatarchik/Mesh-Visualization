@@ -9,13 +9,15 @@ public class NodeClassMono : MonoBehaviour {
 	public int transaction_id;
 	public string time_stamp;
 	public string prefabId = "";
+	public string ip_address;
 
-	public NodeClassMono(int node_id, bool node_status,  Vector3 location, int transaction_id, string time_stamp){
+	public NodeClassMono(int node_id, bool node_status,  Vector3 location, int transaction_id, string time_stamp, string ip_address){
 		this.node_id = node_id;
 		this.node_status = node_status;
 		this.location = location;
 		this.transaction_id = transaction_id;
 		this.time_stamp = time_stamp;
+		this.ip_address = ip_address;
 	}
 
 	public int getNodeId(){
@@ -42,6 +44,10 @@ public class NodeClassMono : MonoBehaviour {
 		return prefabId;
 	}
 
+	public string getIpAddress(){
+		return ip_address;
+	}
+
 	public void setNodeId(int node_id){
 		this.node_id = node_id;
 	}
@@ -66,7 +72,9 @@ public class NodeClassMono : MonoBehaviour {
 		this.prefabId = prefabId;
 	}
 
-
+	public void setIpAddress(string ip_address){
+		this.ip_address = ip_address;
+	}
 
 
 
